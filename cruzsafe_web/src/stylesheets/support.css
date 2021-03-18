@@ -1,0 +1,104 @@
+/*
+ *  support.css
+ *  support.html Stylesheet
+ *  Contains stylings and styling overrides unique to welcome.html
+ */
+
+main {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    display: grid;
+    /*grid-auto-columns: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, auto);*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    grid-column-gap: 0.8em;
+    grid-row-gap: 0.8em;
+    overflow: auto;
+    /* grid-template-areas:
+        "supportIntro supportIntro supportIntro supportLogo"
+        "supportPicture supportPicture supportEmails supportEmails" !important;*/
+}
+
+main > * {
+    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.supportIntro {
+    /*grid-area: supportIntro;*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    overflow: auto;
+    align-content: center;
+    text-align: left;
+    padding: 7%;
+    color: var(--secondary-color);
+}
+
+.supportPictureDiv {
+    padding: 3%;
+    /*grid-area: supportPicture;*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-content: center;
+}
+.supportPicture {
+    /*grid-area: supportPicture;*/
+    align-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.supportLogoDiv {
+    /*grid-area: supportLogo;*/
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.supportLogo {
+    /*grid-area: supportLogo;*/
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.supportEmails {
+    /*grid-area: supportEmails;*/
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 5%;
+    overflow: auto;
+    color: var(--secondary-color);
+}
+.supportEmailsText {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+.supportEmailsLargeText {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 1000)));
+}
+.supportEmailLink {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 1000)));
+    font-weight: bold;
+    color: gold;
+}
+#loginButton {
+    height: 100px;
+    width: 100px;
+}

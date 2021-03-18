@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #145d99;
+    --secondary-color: #eaeaea;
+    --tertiary-color: #145d99; /* Currently only applied to navigation elements. */
+}
+
+*,
+*:after,
+*:before {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+div{
+    display:inherit;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+div#root{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+
+div.PageRoot {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+div.content div{
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+}
+
+ul.navBar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--tertiary-color);
+}
+
+ul.navBar li {
+    font-size: 3.5vmin;
+    list-style-type: none;
+    margin: 0 5px 0 5px;
+}
+ul.navBar li a {
+    float: left;
+    color: var(--secondary-color);
+    padding: 0.5vmin;
+    text-align: center;
+    text-decoration: none;
+    -moz-border-radius: 0.5vmin;
+    border-radius: 0.5vmin;
+}
+ul.navBar li a:hover {
+    -moz-border-radius: 0.5vmin;
+    border-radius: 0.5vmin;
+    background-color: #87b0d1;
+}
+
+ul.navBar li a.active {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+*.navbar_icons {
+    color: var(--secondary-color) !important;
+    height: 3.5vmin !important;
+    width: auto !important;
+}
+
+*.navbar_icons:hover {
+    background-color: #87b0d1;
+    -moz-border-radius: 0.5vmin;
+    border-radius: 0.5vmin;
+}
+
+div.logoBar{
+    display: flex;
+    justify-content:center;
+    min-height: 15vmin;
+    padding: 2vmin
+}
+
+div.logoBar img{
+    height: 15vmin;
+}

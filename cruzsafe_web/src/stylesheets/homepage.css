@@ -1,0 +1,17 @@
+div.home_content {
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr !important;
+    grid-template-rows: 1fr !important;
+    align-content: center;
+    justify-content: center;
+}
+
+div.home_content > div {
+    display: inherit;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}

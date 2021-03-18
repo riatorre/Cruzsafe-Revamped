@@ -1,0 +1,213 @@
+/*
+    admin.css
+    Stylesheet for admin.html
+*/
+
+html,
+body {
+    background-color: var(--secondary-color);
+}
+
+main {
+    display: grid !important;
+    padding-top: 1.1em !important;
+    padding-bottom: 1.1em !important;
+    padding-left: 1.1em !important;
+    padding-right: 1.1em !important;
+    grid-template-columns: 2fr 4fr !important;
+    grid-column-gap: 1.1em !important;
+    grid-template-rows: 100% !important;
+    grid-template-areas: "usersManagement userDetails" !important;
+}
+
+main .usersManagement {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border-radius: 0.7em;
+    justify-content: center;
+    overflow: hidden;
+    grid-area: usersManagement;
+}
+
+.allUsers {
+    color: var(--secondary-color);
+    /*background-color: var(--primary-color);*/
+    overflow: auto;
+    border-radius: 0.7em;
+    height: 100%;
+}
+
+.userOptions {
+    border-radius: 0.7em;
+    padding: 1.1em;
+    height: 20%;
+    margin-bottom: 1.1em;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.usersList {
+    width: 100%;
+    height: 64%;
+    border: 0px solid black;
+    background-color: #919ba5;
+    overflow: auto;
+}
+
+.usersListFooter {
+    background-color: var(--primary-color);
+    padding: 1.1em;
+    padding-top: 1.6em;
+    padding-left: 1.8em;
+    width: 100%;
+    height: 7%;
+    align-content: center;
+    position: relative;
+    bottom: 0;
+}
+
+main .userDetails {
+    grid-area: userDetails;
+    background-color: var(--primary-color);
+    border-radius: 0.7em;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    justify-content: center;
+    /*padding-left: 1.8em;
+    padding-right: 1.8em;*/
+}
+
+.userInfo {
+    overflow: hidden;
+    background-color: #919ba5;
+    height: 100%;
+    width: 100%;
+    display: grid !important;
+    padding-top: 1.1em !important;
+    padding-bottom: 1.1em !important;
+    padding-left: 1.1em !important;
+    padding-right: 1.1em !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-column-gap: 1.1em !important;
+    grid-row-gap: 1.1em !important;
+    grid-template-rows: auto !important;
+    grid-template-areas:
+        "userDetailsPanel userGraph"
+        "latestActivity latestActivity"
+        "userHistoryList userHistoryList" !important;
+}
+
+.userSummaryTitle {
+    height: 6%;
+    top: 0;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0.3em;
+    color: var(--secondary-color);
+}
+
+.userInfo .userDetailsPanel,
+.userInfo .userGraph,
+.userInfo .latestActivity,
+.userInfo .userHistoryList {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 0.7em;
+    align-content: center;
+    justify-content: center;
+    padding: 1.1em;
+}
+
+.userDetailsPanel {
+    grid-area: userDetailsPanel;
+}
+.userGraph {
+    grid-area: userGraph;
+}
+.latestActivity {
+    grid-area: latestActivity;
+}
+.userHistoryTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.userHistoryList {
+    grid-area: userHistoryList;
+    overflow: auto;
+}
+
+/*
+
+.facilityHeader,
+.facilityList,
+.reportDropdown,
+.reportHeaderContainer,
+.reportListContainer,
+.reportBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facilityHeader {
+    grid-area: facilityHeader;
+}
+
+.facilityList {
+    grid-area: facilityList;
+}
+
+.reportDropdown {
+    grid-area: reportDropdown;
+}
+
+.reportHeaderContainer {
+    grid-area: reportHeader;
+}
+
+.reportListContainer {
+    grid-area: reportList;
+}
+
+.reportBtns {
+    grid-area: reportBtns;
+}
+
+#userHistory,
+#userList {
+    overflow: auto;
+}*/
+
+#userHistoryButton,
+#userButton {
+    background-color: black;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    height: 40px;
+    min-width: 70px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: var(--secondary-color);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+#userHistoryButton:hover,
+#userButton:hover {
+    background-color: slategray;
+    color: black;
+}
+
+#userHistoryButton:focus,
+#userButton:focus {
+    background-color: slategray;
+    color: black;
+}
