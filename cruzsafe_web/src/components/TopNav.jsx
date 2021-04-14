@@ -41,10 +41,11 @@ class TopNav extends Component {
                     <li><NavLink to="/reports">Reports</NavLink></li>
                     <li><NavLink to="/analytics">Analytics</NavLink></li>
                     <li><NavLink to="/admin">Admin</NavLink></li>
-                    <li>
-                        <div>
+                    <li className="logout">
+                        <div className="navbar_container">
                         <LogOutOutline 
                             cssClasses="navbar_icons"
+                            title="Logout"
                             onClick = {Authenticator.signout}
                         />
                         </div>

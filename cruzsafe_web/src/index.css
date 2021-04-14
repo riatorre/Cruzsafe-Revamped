@@ -65,6 +65,7 @@ div.content div{
 ul.navBar {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: var(--tertiary-color);
 }
 
@@ -93,16 +94,32 @@ ul.navBar li a.active {
     color: var(--tertiary-color);
 }
 
-*.navbar_icons {
-    color: var(--secondary-color) !important;
-    height: 3.5vmin !important;
-    width: auto !important;
+ul.navBar li.logout {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%
 }
 
-*.navbar_icons:hover {
+ul.navbar li.logout:hover {
     background-color: #87b0d1;
     -moz-border-radius: 0.5vmin;
     border-radius: 0.5vmin;
+}
+
+*.navbar_container {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+*.navbar_icons {
+    display: flex;
+    align-self: center;
+    color: var(--secondary-color) !important;
+    height: 3.5vmin !important;
+    width: auto !important;
 }
 
 div.logoBar{
