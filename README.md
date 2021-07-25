@@ -8,3 +8,10 @@ Main Goals:
 1. Rebuild both the web app and the mobile app from the ground up in order to correct any design flaws.
 2. Break down the web application into a Microservice Architecture to improve performance.
 3. Learn about the design and implementation process of Microservice Architecture.
+
+Design:
+  Currently, the application is broken up into 4 main components:
+  1. SPA (React) View Web Application
+  2. Cross-Platform (React Native) View Mobile Application
+  3. API Server (Model & Controller)
+  4. MySQL Database Server
