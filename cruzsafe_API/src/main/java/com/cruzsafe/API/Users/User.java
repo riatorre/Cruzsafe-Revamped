@@ -1,11 +1,20 @@
 package com.cruzsafe.API.Users;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.cruzsafe.API.Reports.Report;
 
 @Entity
+@Table(name = "users")
 public class User {
     public enum source {
         WEB,
@@ -13,7 +22,8 @@ public class User {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)//*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private int ID;
     
     private String firstname;
@@ -21,22 +31,8 @@ public class User {
     private String email;
     private source src;
 
-    
-    /*public User(int ID, String fName, String lName, String email){
-        this.ID = ID;
-        this.firstname = fName;
-        this.lastname = lName;
-        this.email = email;
-        this.src = source.MOBILE;
-    }
-
-    public User(int ID, String fName, String lName, String email, source src){
-        this.ID = ID;
-        this.firstname = fName;
-        this.lastname = lName;
-        this.email = email;
-        this.src = src;
-    }//*/
+    @OneToMany(mappedBy = "user")
+    private Set<Report> reports = new HashSet<>();//*/
 
     public int getID() {
         return ID;

@@ -35,7 +35,7 @@ public class UserController {
     }
 
     // Get user by associated ID #
-    @PostMapping(path = "/getUser")
+    @GetMapping(path = "/getUser")
     public @ResponseBody Optional<User> getUser(@RequestParam(value = "ID", defaultValue = "1") int ID){
         return userRepository.findById(ID);
     }

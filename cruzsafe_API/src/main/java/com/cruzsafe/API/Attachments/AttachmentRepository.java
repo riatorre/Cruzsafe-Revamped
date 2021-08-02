@@ -1,9 +1,9 @@
-package com.cruzsafe.API.Users;
+package com.cruzsafe.API.Attachments;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Integer>{
+public interface AttachmentRepository extends CrudRepository<Attachment, Integer>{
     
 }
