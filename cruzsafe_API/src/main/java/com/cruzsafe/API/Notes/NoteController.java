@@ -1,15 +1,33 @@
 package com.cruzsafe.API.Notes;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping(path = "/notes")
 public class NoteController {
-    @PostMapping("/notes/getNoteByID")
-    public ResponseEntity<Note> getNote(@RequestParam(value = "ID", defaultValue = "1") int ID){
-        return new ResponseEntity<>(new Note(ID, 3, 4, "Testing a New Note"), HttpStatus.OK);
+    @Autowired
+    private NoteRepository noteRepository;
+
+    @PostMapping(path = "/add")
+    public @ResponseBody String addNewNote ( @RequestParam int user_id, @RequestParam int report_id, @RequestParam String content){
+        return "Saved";
+    }
+
+    @GetMapping(path = "/all")
+    public @ResponseBody Iterable<Note> getAllNotes(){
+        return noteRepository.findAll();
+    }
+
+    @GetMapping(path = "/getNote")
+    public @ResponseBody Optional<Note> getNote(@RequestParam int ID){
+        return noteRepository.findById(ID);
     }
 }
